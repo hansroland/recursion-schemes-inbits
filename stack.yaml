@@ -1,0 +1,10 @@
+resolver: lts-10.0
+flags: {}
+packages:
+- '.'
+- location:
+    git: https://github.com/hansroland/recursion-schemes-helpers
+    commit: d205b6d45d0ddf150c9b5e19150068d5da2dd20e
+  extra-dep: true
+
+extra-deps: []
