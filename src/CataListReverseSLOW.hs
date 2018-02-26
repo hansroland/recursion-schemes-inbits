@@ -1,9 +1,9 @@
 module CataListReverseSLOW where
 
--- | List reverse as catamorphism (direct implementation)
---      Note: Very slow implementation
-
 import Data.Functor.Foldable
+
+-- | List reverse as catamorphism (direct implementation)
+--      Note: Very inefficient and SLOW implementation
 catarev :: [a] -> [a] 
 catarev = cata alg where
     alg :: ListF a [a] -> [a]
