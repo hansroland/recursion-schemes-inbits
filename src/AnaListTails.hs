@@ -3,7 +3,7 @@ module AnaListTails where
 import Data.Functor.Foldable
     
 -- | All tails of a list using an anamorphism
---   Note, this does not add the empty list to the result
+--   Note, this does not add the empty list [] to the result
 anatails :: [a] -> [[a]]
 anatails = ana coalg where
     coalg :: [a] -> ListF [a] [a]
