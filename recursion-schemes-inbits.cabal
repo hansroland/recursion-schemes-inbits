@@ -18,6 +18,7 @@ cabal-version:       >=1.10
 
 executable recursion-schemes-inbits
   main-is:             Main.hs
+  ghc-options:         -O2
   other-modules:       BinaryTree
                        , Expr     
   -- other-extensions:    
@@ -25,7 +26,7 @@ executable recursion-schemes-inbits
                        , recursion-schemes
                        , recursion-schemes-helpers
                        , free
-  hs-source-dirs:      src
+  hs-source-dirs:      app, src
   default-language:    Haskell2010
 
 test-suite doctests
