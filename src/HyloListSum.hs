@@ -2,6 +2,7 @@ module HyloListSum where
 
 import Data.Functor.Foldable 
 
+-- | Sum up Integers from 1 to n with a hylomorphism
 hylosum :: Integer -> Integer
 hylosum end = hylo alg coalg 1
   where 
