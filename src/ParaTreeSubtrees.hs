@@ -5,9 +5,10 @@ import BinaryTree
 
 -- | All subtrees of a tree using a paramorphism
 allSubtrees :: BinaryTree a -> [BinaryTree a]     
-allSubtrees = para coalg where
-    coalg LeafF = []
-    coalg (NodeF (l, ll) v (r, rr)) = ll ++ rr ++ [Node r v l]
+allSubtrees = para alg where
+    alg :: BinaryTreeF a (BinaryTree a, [BinaryTree a]) -> [BinaryTree a]    
+    alg LeafF = []
+    alg (NodeF (l, ll) v (r, rr)) = ll ++ rr ++ [Node r v l]
 
 ex00 :: BinaryTree Char 
 ex00 = Node (Node (Node Leaf 'c' Leaf) 'b' (Node Leaf 'd' Leaf)) 'a' (Node Leaf 'e' Leaf)
