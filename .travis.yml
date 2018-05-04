@@ -1,0 +1,24 @@
+language: haskell
+
+branches:
+  only:
+    - master
+
+sudo: true
+
+cache:
+  directories:
+    - "$HOME/.stack"
+    - ".local/bin"
+
+before_install:
+- export PATH=$HOME/.local/bin:$PATH
+- travis_retry curl -L https://get.haskellstack.org/stable/linux-x86_64.tar.gz | tar xz --wildcards --strip-components=1 -C ~/.local/bin '*/stack'
+
+install: 
+- stack --version
+- stack --no-terminal setup
+
+script:
+- stack --no-terminal build 
+- stack --no-terminal test
