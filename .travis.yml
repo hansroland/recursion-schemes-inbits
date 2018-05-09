@@ -9,7 +9,6 @@ sudo: true
 cache:
   directories:
     - "$HOME/.stack"
-    - ".local/bin"
 
 before_install:
 # Download and unpack the stack executable
